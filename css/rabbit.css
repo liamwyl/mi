@@ -1,0 +1,29 @@
+/* 兔子动画展示  sprite animation*/
+
+.top-left .rabbit {
+	width: 50px;
+	height: 92px;
+	/* box-shadow: 1px 1px 1px #656B79; */
+	/* border: #000000 1px solid; */
+	background-image: url("../img/rabbit.png");
+	background-size: 200px 91px;
+	/* transition: all 0.3s steps(3); */
+	position: absolute;
+	top: 42px;
+	left: 360px;
+	
+	animation: rabbittest 0.7s steps(4) infinite;
+	
+
+}
+.top-left .rabbit:hover {
+	animation-play-state: paused;
+}
+@keyframes rabbittest{
+	from{
+		background-position: 0px 0px;
+	}
+	to{
+		background-position: -200px 0px;
+	}
+}

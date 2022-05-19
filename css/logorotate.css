@@ -1,0 +1,61 @@
+/* 页面logo转动效果 */
+
+html {
+	perspective: 800px;
+}
+
+.rotate {
+	width: 66px;
+	height: 66px;
+	background-color: FF6A00;
+	transform-style: preserve-3d;
+	animation: logorun 4s infinite running;
+	position: relative;
+	margin-top: -132px;
+	margin-left: 225px;
+}
+
+.rotate:hover {
+	animation: logorun 4s infinite paused;
+}
+
+.rotate img {
+	width: 66px;
+	height: 66px;
+	position: absolute;
+}
+
+.robox1 {
+	transform: rotateY(90deg) translateZ(33px);
+}
+
+.robox2 {
+	transform: rotateY(-90deg) translateZ(33px);
+}
+
+.robox3 {
+	transform: rotateX(90deg) translateY(-33px);
+}
+
+.robox4 {
+	transform: rotateX(-90deg) translateY(-33px) translateZ(66px);
+}
+
+.robox5 {
+	transform: rotateZ(0deg) translateZ(33px);
+}
+
+.robox6 {
+	transform: rotateZ(180deg) translateY(-66px) translateZ(-33px);
+}
+
+
+@keyframes logorun {
+	from {
+		transform: rotateX(0) rotateZ(0);
+	}
+
+	to {
+		transform: rotateX(1turn) rotateZ(1turn);
+	}
+}
